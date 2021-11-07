@@ -1,0 +1,26 @@
+{
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build --base=./",
+        "serve": "vite preview",
+        "pretty": "prettier --ignore-path .gitignore --write ./**/*.{json,js,html,css,ts}"
+    },
+    "devDependencies": {
+        "typescript": "^4.3.2",
+        "vite": "^2.6.4",
+        "prettier": "^2.0.0"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "semi": true,
+        "singleQuote": true,
+        "printWidth": 120
+    },
+    "private": true,
+    "dependencies": {
+        "@types/angular": "^1.8.3",
+        "@types/angular-route": "^1.7.2",
+        "angular": "^1.8.2",
+        "angular-route": "^1.8.2"
+    }
+}
