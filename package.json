@@ -6,9 +6,9 @@
         "pretty": "prettier --ignore-path .gitignore --write ./**/*.{json,js,html,css,ts}"
     },
     "devDependencies": {
-        "typescript": "^4.3.2",
-        "vite": "^2.6.4",
-        "prettier": "^2.0.0"
+        "prettier": "^2.7.1",
+        "typescript": "^4.8.2",
+        "vite": "^3.0.9"
     },
     "prettier": {
         "tabWidth": 4,
@@ -18,9 +18,9 @@
     },
     "private": true,
     "dependencies": {
-        "@types/angular": "^1.8.3",
+        "@types/angular": "^1.8.4",
         "@types/angular-route": "^1.7.2",
-        "angular": "^1.8.2",
-        "angular-route": "^1.8.2"
+        "angular": "^1.8.3",
+        "angular-route": "^1.8.3"
     }
 }
