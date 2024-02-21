@@ -1,5 +1,5 @@
-import { IComponentController, IComponentOptions } from 'angular';
-import template from './hello.component.html?raw';
+import { IComponentController, IComponentOptions } from "angular";
+import template from "./hello.component.html?raw";
 
 class HelloController implements IComponentController {
     static $inject = [];
@@ -14,4 +14,4 @@ export class HelloComponent implements IComponentOptions {
     template = template;
 }
 
-export const componentName = 'hello';
+export const componentName = "hello";
