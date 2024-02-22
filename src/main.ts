@@ -1,6 +1,6 @@
 import { ICompileProvider, ILocationProvider, module, route } from "angular";
 import ngRoute from "angular-route";
-import { HelloComponent, componentName as HelloComponentName } from "./components/hello/hello.component";
+import { HelloComponent, componentName as HelloComponentName } from "@src/components/hello/hello.component";
 import "./style.css";
 
 module("AngularJSApp", [ngRoute])
