@@ -1,13 +1,15 @@
 import Logo from "@assets/AngularJS-Shield.svg";
-import { IComponentController, IComponentOptions } from "angular";
+import { IComponentController, IComponentOptions, ILocationService } from "angular";
 import template from "./hello.component.html?raw";
 
 class HelloController implements IComponentController {
-    static $inject = [];
+    static $inject = ["$location"];
     logo = "";
 
-    constructor() {
+    constructor($location: ILocationService) {
         this.logo = Logo;
+
+        console.log($location.path());
     }
 
     $onInit() {}
