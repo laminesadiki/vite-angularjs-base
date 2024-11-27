@@ -1,10 +1,13 @@
 import { ICompileProvider, ILocationProvider, module, route } from "angular";
 import ngRoute from "angular-route";
-import { HelloComponent, componentName as HelloComponentName } from "@src/components/hello/hello.component";
+import { HelloComponent, HelloComponentName } from "@src/components/hello/hello.component";
+import { TestComponent, TestComponentName } from "@src/components/test/test.component";
 import "./style.css";
+import { getTemplateFromComponentName } from "./utils";
 
 module("AngularJSApp", [ngRoute])
     .component(HelloComponentName, new HelloComponent())
+    .component(TestComponentName, new TestComponent())
     .config([
         "$compileProvider",
         ($compileProvider: ICompileProvider) => {
@@ -18,7 +21,10 @@ module("AngularJSApp", [ngRoute])
         "$locationProvider",
         ($routeProvider: route.IRouteProvider, $locationProvider: ILocationProvider) => {
             $locationProvider.hashPrefix("");
-            $routeProvider.when("/home", { template: "<hello></hello>" }).otherwise("/home");
+            $routeProvider
+                .when("/home", { template: getTemplateFromComponentName(HelloComponentName) })
+                .when("/test", { template: getTemplateFromComponentName(TestComponentName),  });
+            // .otherwise("/home");
         },
     ])
     .run(() => {});

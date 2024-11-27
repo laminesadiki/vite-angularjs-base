@@ -8,7 +8,14 @@
     </head>
     <body>
         <div ng-app="AngularJSApp">
-            <div ng-view></div>
+            <div ng-view>
+                <nav>
+                    <li>
+                        <a href="/test">test</a>
+                        <a href="/hello">hello</a>
+                    </li>
+                </nav>
+            </div>
         </div>
 
         <script type="module" src="/src/main.ts"></script>
